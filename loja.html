@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c10">
+  <meta name="description" content="Encontre hardware de qualidade para montar, atualizar ou turbinar seu setup na Nexus Hardware.">
+  <title>Nexus Hardware | Loja e peças de informática</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="produtos.js" defer></script>
+  <script src="icones-hardware.js" defer></script>
+  <script src="armazenamento-carrinho.js" defer></script>
+  <script src="armazenamento-favoritos.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <span>FRETE GRÁTIS</span> em compras acima de R$ 499 <span class="announcement-divider">•</span> até 10x sem juros
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Nexus Hardware - início">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>NEXUS<span class="brand-light">HARDWARE</span></span>
+    </a>
+    <form class="search" role="search">
+      <label class="visually-hidden" for="search-input">Buscar produtos</label>
+      <input id="search-input" type="search" placeholder="O que você está procurando?" autocomplete="off">
+      <button aria-label="Buscar" type="submit">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+      </button>
+    </form>
+    <div class="header-actions">
+      <a class="support-link" href="atendimento.html"><span class="support-icon">?</span><span>Precisa de ajuda?<strong>Fale com a gente</strong></span></a>
+      <div class="account-greeting" id="account-greeting" hidden>
+        <span id="account-greeting-text">Olá</span>
+        <span class="account-avatar" aria-hidden="true">N</span>
+      </div>
+      <a class="favorites-link" href="favoritos.html" aria-label="Abrir favoritos">
+        <span aria-hidden="true">♡</span><span>Favoritos</span><b id="favorites-count">0</b>
+      </a>
+      <button class="cart-button" id="open-cart" aria-label="Abrir carrinho">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 1.9-1.4L22 8H6"></path>
+          <circle cx="10" cy="20" r="1"></circle>
+          <circle cx="18" cy="20" r="1"></circle>
+        </svg>
+        <span>Carrinho</span><b id="cart-count">0</b>
+      </button>
+    </div>
+  </header>
+
+  <nav class="category-nav" aria-label="Categorias principais">
+    <a href="#products" data-nav-category="Todos">Todos os produtos</a>
+    <a href="#products" data-nav-category="Processadores">Processadores</a>
+    <a href="#products" data-nav-category="Memória RAM">Memória RAM</a>
+    <a href="#products" data-nav-category="Armazenamento">Armazenamento</a>
+    <a href="#products" data-nav-category="Periféricos">Periféricos</a>
+    <a href="#products" data-nav-category="Monitores">Monitores</a>
+  </nav>
+
+  <main>
+    <section class="benefits" id="benefits" aria-label="Vantagens Nexus">
+      <div class="benefit">
+        <span class="benefit-icon">↗</span>
+        <span><strong>Frete grátis</strong><small>Acima de R$ 499</small></span>
+      </div>
+      <div class="benefit">
+        <span class="benefit-icon">▤</span>
+        <span><strong>Até 10x sem juros</strong><small>No cartão de crédito</small></span>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="filters" role="group" aria-label="Filtrar produtos por categoria">
+        <button class="filter-chip active" data-category="Todos">Todos</button>
+        <button class="filter-chip" data-category="Processadores">Processadores</button>
+        <button class="filter-chip" data-category="Memória RAM">Memória RAM</button>
+        <button class="filter-chip" data-category="Armazenamento">Armazenamento</button>
+        <button class="filter-chip" data-category="Periféricos">Periféricos</button>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <p>Nenhum produto encontrado. Tente outro termo ou categoria.</p>
+        <a href="atendimento.html">Precisa de ajuda? Fale com nosso atendimento <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#" aria-label="Nexus Hardware - início">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>NEXUS<span class="brand-light">HARDWARE</span></span>
+    </a>
+    <p>Hardware para ir além. © <span id="current-year"></span> Nexus Hardware.</p>
+    <a href="atendimento.html">Atendimento e suporte</a>
+  </footer>
+
+  <div class="overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <span class="eyebrow"><span></span> SUA SELEÇÃO</span>
+        <h2>MEU CARRINHO</h2>
+      </div>
+      <button class="close-cart" id="close-cart" aria-label="Fechar carrinho">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Subtotal</span>
+        <strong id="cart-total">R$ 0,00</strong>
+      </div>
+      <p>Frete calculado na próxima etapa.</p>
+      <button class="button button-primary checkout-button" id="checkout-button">
+        Continuar compra <span>→</span>
+      </button>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

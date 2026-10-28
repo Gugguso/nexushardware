@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c10">
+  <meta name="description" content="Veja e gerencie seus produtos favoritos na Nexus Hardware.">
+  <title>Meus favoritos | Nexus Hardware</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="favoritos.css">
+  <script src="produtos.js" defer></script>
+  <script src="icones-hardware.js" defer></script>
+  <script src="armazenamento-carrinho.js" defer></script>
+  <script src="armazenamento-favoritos.js" defer></script>
+  <script src="favoritos.js" defer></script>
+</head>
+<body class="favorites-page">
+
+  <header class="favorites-header">
+    <a class="brand" href="loja.html" aria-label="Nexus Hardware - início">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>NEXUS<span class="brand-light">HARDWARE</span></span>
+    </a>
+    <nav class="favorites-header-actions" aria-label="Navegação da conta">
+      <a class="favorites-current" href="favoritos.html" aria-current="page">
+        <span aria-hidden="true">♥</span>
+        Favoritos <b id="favorites-count">0</b>
+      </a>
+      <a class="favorites-back-link" href="loja.html#products">← Continuar comprando</a>
+      <a class="favorites-cart-link" href="loja.html?cart=1">Carrinho <span id="favorites-cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main class="favorites-main">
+    <section class="favorites-heading">
+      <div>
+        <div class="eyebrow"><span></span> SUA LISTA PESSOAL</div>
+        <h1>MEUS <em>FAVORITOS</em></h1>
+        <p>Guarde por aqui os produtos que você quer acompanhar.</p>
+      </div>
+      <a class="button button-primary" href="loja.html#products">
+        Explorar produtos <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <section class="favorites-content" aria-label="Produtos favoritos">
+      <div class="favorites-grid" id="favorites-grid"></div>
+      <div class="favorites-empty" id="favorites-empty" hidden>
+        <span class="favorites-empty-icon" aria-hidden="true">♡</span>
+        <h2>Sua lista está vazia</h2>
+        <p>Toque no coração de um produto para encontrá-lo aqui depois.</p>
+        <a class="button button-primary" href="loja.html#products">
+          Ver produtos <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer favorites-footer">
+    <a class="brand" href="loja.html" aria-label="Nexus Hardware - início">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>NEXUS<span class="brand-light">HARDWARE</span></span>
+    </a>
+    <p>Hardware para ir além. © <span id="current-year"></span> Nexus Hardware.</p>
+    <a href="atendimento.html">Atendimento e suporte</a>
+  </footer>
+  <div class="toast" id="favorites-toast" role="status" aria-live="polite"></div>
+</body>
+</html>

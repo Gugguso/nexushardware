@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c10">
+  <meta name="description" content="Crie sua conta Nexus Hardware.">
+  <title>Criar conta | Nexus Hardware</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="cadastro.css">
+  <script src="cadastro.js" defer></script>
+</head>
+<body class="login-page">
+  <header class="login-header">
+    <a class="brand" href="loja.html" aria-label="Nexus Hardware - início">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>NEXUS<span class="brand-light">HARDWARE</span></span>
+    </a>
+  </header>
+
+  <main class="login-main register-main">
+    <section class="login-visual" aria-label="Crie sua conta Nexus Hardware">
+      <div class="visual-grid" aria-hidden="true"></div>
+      <div class="visual-content">
+        <span class="visual-tag"><span></span> SUA CENTRAL DE COMPRAS</span>
+        <h1>SEU SETUP.<br>SUA <em>JORNADA.</em></h1>
+        <p>Crie sua conta para acompanhar pedidos e manter seus produtos favoritos por perto.</p>
+      </div>
+    </section>
+
+    <section class="login-panel register-panel">
+      <div class="login-card">
+        <h2 id="register-heading">CRIE SUA CONTA <em>a</em></h2>
+        <p class="login-intro">Preencha seus dados para começar.</p>
+
+        <form id="register-form">
+          <label class="field-label" for="name">Nome completo</label>
+          <div class="input-wrap">
+            <input id="name" name="name" type="text" placeholder="Seu nome " autocomplete="name" required>
+          </div>
+
+          <label class="field-label" for="register-email">E-mail</label>
+          <div class="input-wrap">
+            <input id="register-email" name="email" type="email" placeholder="Seu e-mail" autocomplete="email" required>
+          </div>
+
+          <label class="field-label" for="register-password">Senha</label>
+          <div class="input-wrap">
+            <input id="register-password" name="password" type="password" placeholder="Mínimo de 6 caracteres" autocomplete="new-password" minlength="6" required>
+          </div>
+
+          <button class="button button-primary login-submit" type="submit">
+            Criar minha conta <span aria-hidden="true">→</span>
+          </button>
+          <p class="form-message" id="register-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="signup-prompt register-login-prompt">
+          Já tem uma conta? <a href="login.html">Entrar</a>
+        </p>
+      </div>
+      <p class="login-footnote">
+        <span aria-hidden="true">◇</span>
+        Cadastro demonstrativo.
+      </p>
+    </section>
+  </main>
+
+  <footer class="login-footer">
+    <span>© <span id="current-year"></span> Nexus Hardware</span>
+    <span>HARDWARE PARA IR ALÉM.</span>
+  </footer>
+</body>
+</html>

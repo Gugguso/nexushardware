@@ -1,0 +1,319 @@
+.favorites-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.favorites-header {
+  min-height: 84px;
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 36px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid #22252b;
+}
+.favorites-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  font-size: 11px;
+}
+.favorites-current, .favorites-back-link, .favorites-cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b7bac1;
+  white-space: nowrap;
+}
+.favorites-current {
+  color: var(--lime);
+}
+.favorites-current > span {
+  font-size: 17px;
+}
+.favorites-current b, .favorites-cart-link span {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #171a10;
+  background: var(--lime);
+  font-size: 9px;
+}
+.favorites-back-link:hover, .favorites-cart-link:hover {
+  color: var(--lime);
+}
+.favorites-main {
+  width: min(1152px, calc(100% - 64px));
+  flex: 1;
+  margin: 0 auto;
+  padding: 64px 0 80px;
+}
+.favorites-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #292c32;
+}
+.favorites-heading h1 {
+  margin: 12px 0 8px;
+  font: 800 clamp(38px, 5vw, 52px)/.95 var(--display);
+}
+.favorites-heading h1 em {
+  color: var(--lime);
+  font-style: normal;
+}
+.favorites-heading p {
+  margin: 0;
+  color: #999ca5;
+  font-size: 11px;
+}
+.favorites-heading .button {
+  flex: 0 0 auto;
+}
+.favorites-content {
+  padding-top: 24px;
+}
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.favorite-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #252830;
+  border-radius: 4px;
+  background: var(--panel);
+  transition: border-color .2s, transform .2s;
+}
+.favorite-card:hover {
+  transform: translateY(-3px);
+  border-color: #50583e;
+}
+.favorite-visual {
+  height: 180px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 55%, #282d2b 0%, #171a1d 46%, #13151a 76%);
+}
+.favorite-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .15;
+  background-image: linear-gradient(135deg, transparent 48%, #555 49%, transparent 50%);
+  background-size: 18px 18px;
+}
+.favorite-visual > a {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: inherit;
+}
+.favorite-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.favorite-visual-emoji,
+.favorite-visual-icon {
+  position: relative;
+  z-index: 1;
+  font-size: 68px;
+  filter: drop-shadow(0 10px 14px rgba(0,0,0,.55));
+}
+.favorite-visual-icon {
+  width: 92px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+  color: var(--lime);
+}
+.favorite-visual-icon svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.favorite-remove {
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ffffff24;
+  border-radius: 50%;
+  color: var(--lime);
+  background: #111318d9;
+  font-size: 19px;
+  cursor: pointer;
+}
+.favorite-remove:hover {
+  color: #171a10;
+  border-color: var(--lime);
+  background: var(--lime);
+}
+.favorite-info {
+  padding: 15px;
+}
+.favorite-category {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--lime);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.favorite-title {
+  min-height: 36px;
+  margin: 0;
+  color: #e2e3e5;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.favorite-title a:hover {
+  color: var(--lime);
+}
+.favorite-description {
+  min-height: 48px;
+  margin: 8px 0 14px;
+  color: #9699a1;
+  font-size: 9px;
+  line-height: 1.7;
+}
+.favorite-buy-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #292c32;
+}
+.favorite-price {
+  color: #f3f3f1;
+  font-size: 15px;
+  font-weight: 700;
+}
+.favorite-price small {
+  display: block;
+  margin-top: 4px;
+  color: #82858e;
+  font-size: 8px;
+  font-weight: 400;
+}
+.favorite-add-cart {
+  padding: 9px 11px;
+  border: 1px solid #3a4031;
+  border-radius: 3px;
+  color: var(--lime);
+  background: #1b2018;
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.favorite-add-cart:hover {
+  color: #17190f;
+  background: var(--lime);
+}
+.favorites-empty {
+  padding: 65px 20px;
+  color: #9699a1;
+  text-align: center;
+}
+.favorites-empty-icon {
+  display: block;
+  margin-bottom: 13px;
+  color: #686d73;
+  font-size: 48px;
+  line-height: 1;
+}
+.favorites-empty h2 {
+  margin: 0 0 8px;
+  color: #e2e3e5;
+  font: 700 28px var(--display);
+}
+.favorites-empty p {
+  margin: 0 0 20px;
+  font-size: 11px;
+}
+.favorites-footer {
+  width: 100%;
+}
+.toast {
+  z-index: 20;
+}
+@media (max-width: 850px) {
+  .favorites-header {
+    padding-inline: 24px;
+  }
+  .favorites-main {
+    width: min(100% - 48px, 720px);
+  }
+  .favorites-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .favorites-header {
+    min-height: 70px;
+    padding: 12px 17px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .favorites-header-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .favorites-main {
+    width: calc(100% - 34px);
+    padding: 44px 0 55px;
+  }
+  .favorites-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 17px;
+  }
+  .favorites-heading h1 {
+    font-size: 42px;
+  }
+  .favorites-grid {
+    gap: 10px;
+  }
+  .favorite-visual {
+    height: 145px;
+  }
+  .favorite-info {
+    padding: 11px;
+  }
+  .favorite-title {
+    font-size: 10px;
+  }
+  .favorite-description {
+    min-height: 56px;
+    font-size: 8px;
+  }
+  .favorite-price {
+    font-size: 12px;
+  }
+  .favorite-add-cart {
+    padding: 8px;
+    font-size: 8px;
+  }
+  .favorites-footer {
+    padding-inline: 17px;
+  }
+}

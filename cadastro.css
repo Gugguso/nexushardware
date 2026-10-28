@@ -1,0 +1,39 @@
+.register-main {
+  min-height: 690px;
+}
+.register-panel {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+.register-panel .login-intro {
+  margin-bottom: 20px;
+}
+.register-panel .field-label {
+  margin-bottom: 6px;
+}
+.register-panel .input-wrap {
+  height: 40px;
+  margin-bottom: 13px;
+}
+.register-panel .input-wrap input {
+  padding-inline: 12px;
+}
+.register-panel .login-submit {
+  margin-top: 4px;
+}
+.register-login-prompt {
+  margin-top: 18px;
+}
+.register-panel .login-footnote {
+  max-width: 360px;
+  text-align: center;
+  line-height: 1.6;
+}
+@media (max-width: 760px) {
+  .register-main {
+    min-height: 0;
+  }
+  .register-panel {
+    padding-top: 30px;
+  }
+}

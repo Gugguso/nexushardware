@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c10">
+  <meta name="description" content="Detalhes, especificações e avaliações de produtos Nexus Hardware.">
+  <title>Produto | Nexus Hardware</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="produto.css">
+  <script src="produtos.js" defer></script>
+  <script src="icones-hardware.js" defer></script>
+  <script src="armazenamento-carrinho.js" defer></script>
+  <script src="produto.js" defer></script>
+</head>
+<body class="product-page-body">
+
+  <header class="product-header">
+    <a class="brand" href="loja.html" aria-label="Nexus Hardware - início">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>NEXUS<span class="brand-light">HARDWARE</span></span>
+    </a>
+    <a class="product-back-link" href="loja.html#products">← Voltar aos produtos</a>
+    <a class="product-cart-link" href="loja.html?cart=1">Carrinho <span id="detail-cart-count">0</span></a>
+  </header>
+
+  <main class="product-detail-main">
+    <nav class="product-breadcrumb" aria-label="Navegação estrutural">
+      <a href="loja.html">Início</a>
+      <span>/</span>
+      <a href="loja.html#products">Produtos</a>
+      <span>/</span>
+      <span id="breadcrumb-product">Produto</span>
+    </nav>
+    <div id="product-detail"></div>
+    <section class="reviews-section" id="reviews">
+      <div class="detail-section-heading">
+        <div>
+          <div class="eyebrow"><span></span> OPINIÕES SOBRE O PRODUTO</div>
+          <h2>AVALIAÇÕES <em>DE CLIENTES</em></h2>
+        </div>
+        <span class="demo-review-label">DADOS DEMONSTRATIVOS</span>
+      </div>
+      <div class="reviews-content" id="reviews-content"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer product-footer">
+    <a class="brand" href="loja.html" aria-label="Nexus Hardware - início">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>NEXUS<span class="brand-light">HARDWARE</span></span>
+    </a>
+    <p>Hardware para ir além. © <span id="current-year"></span> Nexus Hardware.</p>
+    <a href="atendimento.html">Atendimento e suporte</a>
+  </footer>
+  <div class="toast" id="product-toast" role="status" aria-live="polite"></div>
+</body>
+</html>
